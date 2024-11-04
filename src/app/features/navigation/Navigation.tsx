@@ -1,6 +1,6 @@
 "use client";
 
-import { Stack, StackProps, Typography } from "@mui/material";
+import { Stack, StackProps, Typography, TypographyProps } from "@mui/material";
 import { NavItem } from "./NavItem";
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -8,12 +8,19 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const StackWrapper = forwardRef<HTMLDivElement, StackProps>((props, ref) => {
   return <Stack ref={ref} {...props} />;
 });
+
+const TypographyWrapper = forwardRef<HTMLDivElement, TypographyProps>(
+  (props, ref) => {
+    return <Typography ref={ref} {...props} />;
+  }
+);
+
 export const Navigation = () => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+
   const MotionStack = motion(StackWrapper);
+  const MotionTypography = motion(TypographyWrapper);
 
   const handleScroll = () => {
     const stickyTrigger = navRef.current?.offsetTop ?? 0;
@@ -41,8 +48,9 @@ export const Navigation = () => {
         borderTopRightRadius: isSticky ? 0 : "4px",
         fontSize: isSticky ? "12px !important" : "14px !important",
       }}
-      transition={{ duration: 0.5, ease: "linear" }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
       sx={{
+        height: "56px",
         background: "#F7F7F7",
         padding: "16px",
         flexDirection: "row",
@@ -53,19 +61,64 @@ export const Navigation = () => {
       }}
     >
       <NavItem>
-        <Typography variant="subtitle1">About</Typography>
+        <MotionTypography
+          sx={{ fontSize: "14px" }}
+          animate={{
+            fontSize: isSticky ? "12px" : "14px",
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          variant="subtitle1"
+        >
+          About
+        </MotionTypography>
       </NavItem>
       <NavItem>
-        <Typography variant="subtitle1">Skill</Typography>
+        <MotionTypography
+          sx={{ fontSize: "14px" }}
+          animate={{
+            fontSize: isSticky ? "12px" : "14px",
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          variant="subtitle1"
+        >
+          Skill
+        </MotionTypography>
       </NavItem>
       <NavItem>
-        <Typography variant="subtitle1">Experience</Typography>
+        <MotionTypography
+          sx={{ fontSize: "14px" }}
+          animate={{
+            fontSize: isSticky ? "12px" : "14px",
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          variant="subtitle1"
+        >
+          Experience
+        </MotionTypography>
       </NavItem>
       <NavItem>
-        <Typography variant="subtitle1">Work</Typography>
+        <MotionTypography
+          sx={{ fontSize: "14px" }}
+          animate={{
+            fontSize: isSticky ? "12px" : "14px",
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          variant="subtitle1"
+        >
+          Work
+        </MotionTypography>
       </NavItem>
       <NavItem>
-        <Typography variant="subtitle1">Contact</Typography>
+        <MotionTypography
+          sx={{ fontSize: "14px" }}
+          animate={{
+            fontSize: isSticky ? "12px" : "14px",
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          variant="subtitle1"
+        >
+          Contact
+        </MotionTypography>
       </NavItem>
     </MotionStack>
   );
