@@ -1,26 +1,14 @@
 "use client";
 
-import { Stack, StackProps, Typography, TypographyProps } from "@mui/material";
 import { NavItem } from "./NavItem";
-import React, { forwardRef, useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 
-const StackWrapper = forwardRef<HTMLDivElement, StackProps>((props, ref) => {
-  return <Stack ref={ref} {...props} />;
-});
-
-const TypographyWrapper = forwardRef<HTMLDivElement, TypographyProps>(
-  (props, ref) => {
-    return <Typography ref={ref} {...props} />;
-  }
-);
+import MotionStack from "@/app/shared/components/MotionStack";
+import MotionTypography from "@/app/shared/components/MotionTypography";
 
 export const Navigation = () => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
-
-  const MotionStack = motion(StackWrapper);
-  const MotionTypography = motion(TypographyWrapper);
 
   const handleScroll = () => {
     const stickyTrigger = navRef.current?.offsetTop ?? 0;
