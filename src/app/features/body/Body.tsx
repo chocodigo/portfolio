@@ -2,6 +2,7 @@
 import { Stack } from "@mui/material";
 import { Navigation } from "../navigation";
 import { About } from "../about";
+import { Skill } from "../skill";
 
 export const Body = () => {
   return (
@@ -15,6 +16,7 @@ export const Body = () => {
     >
       <Navigation />
       <About />
+      <Skill />
     </Stack>
   );
 };

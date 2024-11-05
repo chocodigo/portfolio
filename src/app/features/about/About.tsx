@@ -7,6 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { IconButton } from "@mui/material";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import CallIcon from "@mui/icons-material/Call";
+import { Title } from "@/app/shared/components/Title";
 
 export const About = () => {
   return (
@@ -17,31 +18,12 @@ export const About = () => {
         background: "#fff",
         flexDirection: "row",
         justifyContent: "space-between",
-        borderTop: "1px solid #DDDDDD",
+        borderBottom: "1px solid #DDDDDD",
       }}
     >
       <MotionStack>
-        <MotionTypography
-          sx={{ fontSize: "24px", color: "#636363", fontWeight: "300" }}
-        >
-          About
-        </MotionTypography>
-        <MotionStack
-          sx={{
-            width: "52px",
-            height: "29.2px",
-            padding: " 11.2px 0px 16px 0px",
-          }}
-        >
-          <MotionStack
-            sx={{
-              width: "100%",
-              height: "2px",
-              background:
-                "linear-gradient(270deg, #8CC9F0 0%, #A89CC8 49%, #EFA8B0 99%)",
-            }}
-          />
-        </MotionStack>
+        <Title>About</Title>
+
         <MotionStack sx={{ gap: "15px" }}>
           <MotionTypography sx={{ fontSize: "14px", color: "#636363" }}>
             웹 개발자 최해림입니다.
