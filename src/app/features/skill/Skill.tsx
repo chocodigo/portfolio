@@ -12,6 +12,19 @@ import { ElectronIcon } from "./Icons/ElectronIcon";
 import { NextJSIcon } from "./Icons/NextJSIcon";
 import { IonicIcon } from "./Icons/IonicIcon";
 import { SassIcon } from "./Icons/SassIcon";
+import { StyledComponents } from "./Icons/StyledComponents";
+import { MUIIcon } from "./Icons/MUIIcon";
+import { DevExtremeIcon } from "./Icons/DevExtremeIcon";
+import { MobxIcon } from "./Icons/MobxIcon";
+import { RecoilIcon } from "./Icons/RecoilIcon";
+import { ZustandIcon } from "./Icons/ZustandIcon";
+import { DesignSystemIcon } from "./Icons/DesignSystemIcon";
+import { MonorepoIcon } from "./Icons/MonorepoIcon";
+import { StorybookIcon } from "./Icons/StorybookIcon";
+import { SpringBoot } from "./Icons/SpringBoot";
+import { NodeJSIcon } from "./Icons/NodeJSIcon";
+import { NestJSIcon } from "./Icons/NestJSIcon";
+import { AndroidIcon } from "./Icons/AndroidIcon";
 
 export const Skill = () => {
   return (
@@ -35,6 +48,19 @@ export const Skill = () => {
         <NextJSIcon />
         <IonicIcon />
         <SassIcon />
+        <StyledComponents />
+        <MUIIcon />
+        <DevExtremeIcon />
+        <MobxIcon />
+        <RecoilIcon />
+        <ZustandIcon />
+        <DesignSystemIcon />
+        <MonorepoIcon />
+        <StorybookIcon />
+        <SpringBoot />
+        <NodeJSIcon />
+        <NestJSIcon />
+        <AndroidIcon />
       </MotionStack>
     </MotionStack>
   );
