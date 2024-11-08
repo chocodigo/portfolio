@@ -36,6 +36,7 @@ export const Skill = () => {
         width: "100%",
         padding: "80px 80px 48px 80px",
         gap: "30px",
+        borderBottom: "1px solid #DDDDDD",
       }}
     >
       <Title>Skill</Title>
