@@ -25,6 +25,8 @@ import { SpringBoot } from "./Icons/SpringBoot";
 import { NodeJSIcon } from "./Icons/NodeJSIcon";
 import { NestJSIcon } from "./Icons/NestJSIcon";
 import { AndroidIcon } from "./Icons/AndroidIcon";
+import { dataList } from "./constants/dataList";
+import { SkillList } from "./components/SkillList";
 
 export const Skill = () => {
   return (
@@ -37,30 +39,14 @@ export const Skill = () => {
       }}
     >
       <Title>Skill</Title>
-      <MotionStack sx={{ background: "black" }}>
-        <JSIcon />
-        <TSIcon />
-        <JavaIcon />
-        <HTMLIcon />
-        <CSSIcon />
-        <ReactIcon />
-        <ElectronIcon />
-        <NextJSIcon />
-        <IonicIcon />
-        <SassIcon />
-        <StyledComponents />
-        <MUIIcon />
-        <DevExtremeIcon />
-        <MobxIcon />
-        <RecoilIcon />
-        <ZustandIcon />
-        <DesignSystemIcon />
-        <MonorepoIcon />
-        <StorybookIcon />
-        <SpringBoot />
-        <NodeJSIcon />
-        <NestJSIcon />
-        <AndroidIcon />
+      <MotionStack>
+        {dataList.map((item, index) => (
+          <SkillList
+            title={item.title}
+            list={item.list}
+            key={`skill_list_${index}`}
+          />
+        ))}
       </MotionStack>
     </MotionStack>
   );

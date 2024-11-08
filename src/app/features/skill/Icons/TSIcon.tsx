@@ -5,7 +5,7 @@ export const TSIcon = () => {
       fill="none"
       version="1.1"
       width="26"
-      height="17"
+      height="30"
       viewBox="0 0 26 17"
     >
       <g>
