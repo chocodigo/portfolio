@@ -39,7 +39,7 @@ export const Skill = () => {
       }}
     >
       <Title>Skill</Title>
-      <MotionStack>
+      <MotionStack sx={{ gap: "30px" }}>
         {dataList.map((item, index) => (
           <SkillList
             title={item.title}

@@ -32,6 +32,7 @@ export const SkillBox = ({ name, icon, index, isLast }: SkillBoxProps) => {
         borderBottomLeftRadius: index === 0 ? "8px" : 0,
         borderTopRightRadius: isLast ? "8px" : 0,
         borderBottomRightRadius: isLast ? "8px" : 0,
+        textAlign: "center",
       }}
     >
       {icon}
