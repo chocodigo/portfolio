@@ -1,5 +1,8 @@
+"use client";
+
 import MotionStack from "@/app/shared/components/MotionStack";
 import { Title } from "@/app/shared/components/Title";
+import { ExperienceTimeLine } from "./components/ExperienceTimeLine";
 
 export const Experience = () => {
   return (
@@ -13,6 +16,7 @@ export const Experience = () => {
       }}
     >
       <Title>Experience</Title>
+      <ExperienceTimeLine />
     </MotionStack>
   );
 };

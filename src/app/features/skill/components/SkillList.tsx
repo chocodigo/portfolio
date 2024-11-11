@@ -14,6 +14,7 @@ export const SkillList = ({ title, list }: SkillListProps) => {
       <MotionStack sx={{ flexDirection: "row" }}>
         {list.map((item, index) => (
           <SkillBox
+            key={`SKillBox_${index}`}
             icon={item.icon}
             index={index}
             name={item.name}
