@@ -4,6 +4,7 @@ import { Navigation } from "../navigation";
 import { About } from "../about";
 import { Skill } from "../skill";
 import { Experience } from "../experience";
+import { Work } from "../work";
 
 export const Body = () => {
   return (
@@ -12,13 +13,13 @@ export const Body = () => {
         marginTop: "64px",
         borderRadius: "4px",
         width: "864px",
-        height: "3448px",
       }}
     >
       <Navigation />
       <About />
       <Skill />
       <Experience />
+      <Work />
     </Stack>
   );
 };

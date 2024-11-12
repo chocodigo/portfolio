@@ -46,6 +46,7 @@ export const Navigation = () => {
         position: "sticky",
         overflow: "auto",
         top: 0,
+        zIndex: 100,
       }}
     >
       <NavItem>
