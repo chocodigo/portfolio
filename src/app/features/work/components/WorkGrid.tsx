@@ -2,8 +2,13 @@ import MotionStack from "@/app/shared/components/MotionStack";
 import { Card, CardContent, CardMedia, Grid2, Typography } from "@mui/material";
 import { JobGridType } from "../types/dataType";
 import MotionTypography from "@/app/shared/components/MotionTypography";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
 
 export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
+  const { updateSelectedPopupId } = useSelectedPoupIdStates();
+
   return (
     <MotionStack sx={{ gap: "8px" }}>
       <MotionStack
@@ -37,13 +42,20 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
 
       <Grid2 container spacing={1}>
         {dataList.map((item, index) => (
-          <Grid2 size={4} key={`${item.title}`}>
-            <Card>
-              <CardMedia component={"img"} height="140" image={item.image} />
-              <CardContent>
-                <Typography sx={{ fontSize: "14px" }}>{item.title}</Typography>
-              </CardContent>
-            </Card>
+          <Grid2 size={4} key={`${jobName}_${item.title}_${index}`}>
+            <MotionStack
+              layoutId={item.title}
+              onClick={() => updateSelectedPopupId(item.title)}
+            >
+              <Card>
+                <CardMedia component={"img"} height="140" image={item.image} />
+                <CardContent>
+                  <Typography sx={{ fontSize: "14px" }}>
+                    {item.title}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </MotionStack>
           </Grid2>
         ))}
       </Grid2>

@@ -5,6 +5,9 @@ import { About } from "../about";
 import { Skill } from "../skill";
 import { Experience } from "../experience";
 import { Work } from "../work";
+import { AnimatePresence, motion } from "framer-motion";
+import MotionStack from "@/app/shared/components/MotionStack";
+import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
 
 export const Body = () => {
   return (
