@@ -1,12 +1,20 @@
 import MotionButton from "@/app/shared/components/MotionButton";
 import MotionStack from "@/app/shared/components/MotionStack";
 import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
-import { Card, CardHeader } from "@mui/material";
+import { Card, CardContent, CardHeader } from "@mui/material";
 import { AnimatePresence } from "framer-motion";
 import CloseIcon from "@mui/icons-material/Close";
+import { Notion } from "../../notion/Notion";
 
 export const WorkCardPopup = () => {
-  const { selectedPopupId, updateSelectedPopupId } = useSelectedPoupIdStates();
+  const { selectedPopupId, updateSelectedPopupId, notionId, updateNotionId } =
+    useSelectedPoupIdStates();
+
+  const resetId = () => {
+    updateNotionId(null);
+    updateSelectedPopupId(null);
+  };
+
   return (
     <AnimatePresence>
       {selectedPopupId && (
@@ -21,16 +29,20 @@ export const WorkCardPopup = () => {
             alignItems: "center",
             justifyContent: "center",
           }}
+          onClick={resetId}
         >
-          <Card>
+          <Card sx={{ width: "800px", overflowY: "auto" }}>
             <CardHeader
               action={
                 <MotionButton>
-                  <CloseIcon onClick={() => updateSelectedPopupId(null)} />
+                  <CloseIcon onClick={resetId} />
                 </MotionButton>
               }
               title={selectedPopupId}
             />
+            <CardContent>
+              <Notion id={notionId} />
+            </CardContent>
           </Card>
         </MotionStack>
       )}

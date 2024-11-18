@@ -7,4 +7,5 @@ export type JobGridType = {
 export type JobCardType = {
   title: string;
   image: string;
+  notionId: string;
 };

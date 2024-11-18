@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
 
 export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
-  const { updateSelectedPopupId } = useSelectedPoupIdStates();
+  const { updateSelectedPopupId, updateNotionId } = useSelectedPoupIdStates();
 
   return (
     <MotionStack sx={{ gap: "8px" }}>
@@ -45,7 +45,10 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
           <Grid2 size={4} key={`${jobName}_${item.title}_${index}`}>
             <MotionStack
               layoutId={item.title}
-              onClick={() => updateSelectedPopupId(item.title)}
+              onClick={async () => {
+                updateNotionId(item.notionId);
+                updateSelectedPopupId(item.title);
+              }}
             >
               <Card>
                 <CardMedia component={"img"} height="140" image={item.image} />
