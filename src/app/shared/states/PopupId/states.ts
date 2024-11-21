@@ -1,8 +1,8 @@
 import { create } from "zustand";
 
 type State = {
-  selectedPopupId: string | null;
-  notionId: string | null;
+  selectedPopupId: string;
+  notionId: string;
 };
 
 type Action = {
@@ -11,9 +11,9 @@ type Action = {
 };
 
 export const usePopupIdStore = create<State & Action>((set) => ({
-  selectedPopupId: null,
+  selectedPopupId: "",
   updateSelectedPopupId: (selectedPopupId) => set(() => ({ selectedPopupId })),
 
-  notionId: null,
+  notionId: "",
   updateNotionId: (notionId) => set(() => ({ notionId })),
 }));

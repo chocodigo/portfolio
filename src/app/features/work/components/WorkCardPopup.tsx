@@ -5,22 +5,21 @@ import { Card, CardContent, CardHeader } from "@mui/material";
 import { AnimatePresence } from "framer-motion";
 import CloseIcon from "@mui/icons-material/Close";
 import { Notion } from "../../notion/Notion";
-import { NotionAPI } from "notion-client";
+import MotionCard from "@/app/shared/components/MotionCard";
 
 export const WorkCardPopup = () => {
   const { selectedPopupId, updateSelectedPopupId, notionId, updateNotionId } =
     useSelectedPoupIdStates();
 
   const resetId = () => {
-    updateNotionId(null);
-    updateSelectedPopupId(null);
+    updateNotionId("");
+    updateSelectedPopupId("");
   };
 
   return (
-    <AnimatePresence>
+    <>
       {selectedPopupId && (
         <MotionStack
-          layoutId={selectedPopupId}
           sx={{
             position: "fixed",
             zIndex: 200,
@@ -32,21 +31,23 @@ export const WorkCardPopup = () => {
           }}
           onClick={resetId}
         >
-          <Card sx={{ width: "800px", overflowY: "auto" }}>
-            <CardHeader
-              action={
-                <MotionButton>
-                  <CloseIcon onClick={resetId} />
-                </MotionButton>
-              }
-              title={selectedPopupId}
-            />
-            <CardContent>
-              <Notion id={notionId} />
-            </CardContent>
-          </Card>
+          <AnimatePresence>
+            <MotionCard
+              layoutId={selectedPopupId}
+              sx={{
+                width: "800px",
+                height: "90%",
+                overflowY: "auto",
+                clipPath: "inset(0 round 4px)",
+              }}
+            >
+              <CardContent>
+                <Notion id={notionId} />
+              </CardContent>
+            </MotionCard>
+          </AnimatePresence>
         </MotionStack>
       )}
-    </AnimatePresence>
+    </>
   );
 };
