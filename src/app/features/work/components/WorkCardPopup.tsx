@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from "@mui/material";
 import { AnimatePresence } from "framer-motion";
 import CloseIcon from "@mui/icons-material/Close";
 import { Notion } from "../../notion/Notion";
+import { NotionAPI } from "notion-client";
 
 export const WorkCardPopup = () => {
   const { selectedPopupId, updateSelectedPopupId, notionId, updateNotionId } =

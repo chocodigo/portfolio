@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { NotionAPI } from "notion-client";
 
 export const useNotion = (NOTION_PAGE_ID: string | null) => {
   const [response, setResponse] = useState();

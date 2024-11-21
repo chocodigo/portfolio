@@ -5,6 +5,7 @@ import MotionTypography from "@/app/shared/components/MotionTypography";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
+import { NotionAPI } from "notion-client";
 
 export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
   const { updateSelectedPopupId, updateNotionId } = useSelectedPoupIdStates();
