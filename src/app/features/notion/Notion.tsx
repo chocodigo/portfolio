@@ -1,13 +1,9 @@
-import { NotionRenderer } from "react-notion-x";
+// import { NotionRenderer } from "react-notion-x";
+import { NotionRenderer } from "react-notion";
 import { Stack } from "@mui/material";
 import { useNotionResponse } from "./api/useNotionResponse";
-// core styles shared by all of react-notion-x (required)
 import "react-notion-x/src/styles.css";
-
-// used for code syntax highlighting (optional)
 import "prismjs/themes/prism-tomorrow.css";
-
-// used for rendering equations (optional)
 import "katex/dist/katex.min.css";
 
 interface NotionProps {
@@ -17,9 +13,25 @@ interface NotionProps {
 export const Notion = ({ id }: NotionProps) => {
   const { data } = useNotionResponse(id);
 
+  console.log("data:::", data);
+
   return (
-    <Stack sx={{ padding: "16px" }}>
-      {data ? <NotionRenderer recordMap={data.data} fullPage={true} /> : <></>}
+    <Stack
+      sx={{
+        padding: "16px",
+      }}
+    >
+      {data?.data ? (
+        <NotionRenderer
+          // recordMap={data.data}
+          blockMap={data}
+          fullPage={true}
+          // rootPageId={id}
+          // isImageZoomable={false}
+        />
+      ) : (
+        <></>
+      )}
     </Stack>
   );
 };

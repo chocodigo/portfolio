@@ -16,6 +16,7 @@ export const Body = () => {
         marginTop: "64px",
         borderRadius: "4px",
         width: "864px",
+        marginBottom: "64px",
       }}
     >
       <Navigation />

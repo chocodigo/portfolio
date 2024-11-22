@@ -1,9 +1,8 @@
-import MotionButton from "@/app/shared/components/MotionButton";
 import MotionStack from "@/app/shared/components/MotionStack";
 import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
-import { Card, CardContent, CardHeader } from "@mui/material";
+import { CardContent } from "@mui/material";
 import { AnimatePresence } from "framer-motion";
-import CloseIcon from "@mui/icons-material/Close";
+
 import { Notion } from "../../notion/Notion";
 import MotionCard from "@/app/shared/components/MotionCard";
 
@@ -40,6 +39,7 @@ export const WorkCardPopup = () => {
                 overflowY: "auto",
                 clipPath: "inset(0 round 4px)",
               }}
+              onClick={(e) => e.stopPropagation()}
             >
               <CardContent>
                 <Notion id={notionId} />
