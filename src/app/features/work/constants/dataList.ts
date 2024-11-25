@@ -29,12 +29,12 @@ export const dataList: JobGridType[] = [
       {
         title: "Nara Cloud - BMS",
         image: "nara/bms.png",
-        notionId: "Nara-Cloud-BMS-1456ab489f6e80319646f619245344f7",
+        notionId: "1456ab489f6e80319646f619245344f7",
       },
       {
         title: "Nara Cloud - 입찰분석 시스템",
         image: "nara/입찰분석 시스템.png",
-        notionId: "Nara-Cloud-1456ab489f6e80ce8ed9f36d1164ffc3",
+        notionId: "1456ab489f6e80ce8ed9f36d1164ffc3",
       },
       {
         title: "삼양감속기 - 모바일 매뉴얼 페이지",
@@ -44,12 +44,12 @@ export const dataList: JobGridType[] = [
       {
         title: "Nara Cloud - 매뉴얼 / 교육자료 페이지",
         image: "nara/bms매뉴얼.png",
-        notionId: "Nara-Cloud-1456ab489f6e8087b15ff06afe4ba007",
+        notionId: "1456ab489f6e8087b15ff06afe4ba007",
       },
       {
         title: "MEGA-NT / 유지보수",
         image: "nara/megant.png",
-        notionId: "MEGA-NT-1456ab489f6e80be93cde5b037061ac3",
+        notionId: "1456ab489f6e80be93cde5b037061ac3",
       },
     ],
   },
@@ -60,7 +60,7 @@ export const dataList: JobGridType[] = [
       {
         title: "슈퍼피플, 슈퍼피플2",
         image: "wonderpeople/superpeople.png",
-        notionId: "2-13c6ab489f6e808f8a70e80e9a48aec7",
+        notionId: "13c6ab489f6e808f8a70e80e9a48aec7",
       },
     ],
   },
@@ -71,23 +71,22 @@ export const dataList: JobGridType[] = [
       {
         title: "Dentbird Desktop App for Medit Link",
         image: "imagoworks/meditlink.png",
-        notionId:
-          "Dentbird-Desktop-App-for-Medit-Link-1456ab489f6e805f88a9eedbebd73d02",
+        notionId: "1456ab489f6e805f88a9eedbebd73d02",
       },
       {
         title: "Dentbird Crown",
         image: "imagoworks/crown.png",
-        notionId: "61f0455671b24c2391d763aca6a24c9e",
+        notionId: "1496ab489f6e8068b5dfe802c5d9e320",
       },
       {
         title: "Dentbird Studio",
         image: "imagoworks/studio.png",
-        notionId: "61f0455671b24c2391d763aca6a24c9e",
+        notionId: "1496ab489f6e80b4857ee14e6a12983d",
       },
       {
         title: "Dentbird Modeler",
         image: "imagoworks/modeler.png",
-        notionId: "61f0455671b24c2391d763aca6a24c9e",
+        notionId: "1496ab489f6e8041a567f558f398116e",
       },
     ],
   },

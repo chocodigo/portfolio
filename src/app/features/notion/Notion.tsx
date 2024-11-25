@@ -1,5 +1,5 @@
-// import { NotionRenderer } from "react-notion-x";
-import { NotionRenderer } from "react-notion";
+import { NotionRenderer } from "react-notion-x";
+// import { NotionRenderer } from "react-notion";
 import { Stack } from "@mui/material";
 import { useNotionResponse } from "./api/useNotionResponse";
 import "react-notion-x/src/styles.css";
@@ -11,9 +11,7 @@ interface NotionProps {
 }
 
 export const Notion = ({ id }: NotionProps) => {
-  const { data } = useNotionResponse(id);
-
-  console.log("data:::", data);
+  const { data, isLoading } = useNotionResponse(id);
 
   return (
     <Stack
@@ -21,16 +19,15 @@ export const Notion = ({ id }: NotionProps) => {
         padding: "16px",
       }}
     >
-      {data?.data ? (
+      {isLoading && <>Loading ...</>}
+      {data?.data && (
         <NotionRenderer
-          // recordMap={data.data}
-          blockMap={data}
+          recordMap={data.data}
+          // blockMap={data.data}
           fullPage={true}
-          // rootPageId={id}
-          // isImageZoomable={false}
+          rootPageId={id}
+          isImageZoomable={false}
         />
-      ) : (
-        <></>
       )}
     </Stack>
   );

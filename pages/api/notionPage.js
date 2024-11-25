@@ -1,7 +1,7 @@
 import { NotionAPI } from "notion-client";
 
 export default async function handler(req, res) {
-  const { pageId } = req.query; // 요청에서 페이지 ID 추출
+  const { pageId } = req.query;
   const notion = new NotionAPI();
 
   try {
