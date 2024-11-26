@@ -15,24 +15,6 @@ export const Navigation = ({ scrollToSection }: IProps) => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
   const placeholderRef = useRef<HTMLDivElement>(null);
-  // const handleScroll = () => {
-  //   const stickyTrigger = navRef.current?.offsetTop ?? 0;
-  //   const scrollPosition = document.body.scrollTop;
-  //   console.log("isSticky:::", scrollPosition, stickyTrigger);
-  //   if (scrollPosition >= stickyTrigger) {
-  //     setIsSticky(true);
-  //   } else {
-  //     setIsSticky(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   document.body.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     document.body.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
