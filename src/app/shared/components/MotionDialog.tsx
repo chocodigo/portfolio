@@ -8,6 +8,6 @@ const DialogWrapper = forwardRef<HTMLDivElement, DialogProps>((props, ref) => {
   return <Dialog ref={ref} {...props} />;
 });
 
-const MotionDialog = motion(DialogWrapper);
+const MotionDialog = motion.create(DialogWrapper);
 
 export default MotionDialog;

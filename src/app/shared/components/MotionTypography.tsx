@@ -10,6 +10,6 @@ const TypographyWrapper = forwardRef<HTMLDivElement, TypographyProps>(
   }
 );
 
-const MotionTypography = motion(TypographyWrapper);
+const MotionTypography = motion.create(TypographyWrapper);
 
 export default MotionTypography;

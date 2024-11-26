@@ -8,6 +8,6 @@ const StackWrapper = forwardRef<HTMLDivElement, StackProps>((props, ref) => {
   return <Stack ref={ref} {...props} />;
 });
 
-const MotionStack = motion(StackWrapper);
+const MotionStack = motion.create(StackWrapper);
 
 export default MotionStack;

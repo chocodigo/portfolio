@@ -8,6 +8,6 @@ const CardWrapper = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
   return <Card ref={ref} {...props} />;
 });
 
-const MotionCard = motion(CardWrapper);
+const MotionCard = motion.create(CardWrapper);
 
 export default MotionCard;

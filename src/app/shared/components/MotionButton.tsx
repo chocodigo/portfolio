@@ -10,6 +10,6 @@ const ButtonWrapper = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-const MotionButton = motion(ButtonWrapper);
+const MotionButton = motion.create(ButtonWrapper);
 
 export default MotionButton;
