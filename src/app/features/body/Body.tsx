@@ -7,6 +7,7 @@ import { Experience } from "../experience";
 import { Work } from "../work";
 import { MutableRefObject, useRef } from "react";
 import { sectionName, SectionRefs } from "../navigation/navType";
+import { Contact } from "../contact";
 
 export const Body = () => {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -82,7 +83,9 @@ export const Body = () => {
       <div ref={workRef}>
         <Work />
       </div>
-      <div ref={contactRef}></div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </Stack>
   );
 };

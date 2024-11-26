@@ -13,8 +13,7 @@ export const Work = () => {
         width: "100%",
         padding: "80px 80px 48px 80px",
         gap: "30px",
-        borderBottomLeftRadius: "4px",
-        borderBottomRightRadius: "4px",
+        borderBottom: "1px solid #DDDDDD",
       }}
     >
       <Title>Work</Title>
