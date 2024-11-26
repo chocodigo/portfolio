@@ -1,3 +1,5 @@
+"use client";
+
 import MotionStack from "@/app/shared/components/MotionStack";
 import { Title } from "@/app/shared/components/Title";
 import { WorkGrid } from "./components/WorkGrid";

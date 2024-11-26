@@ -1,12 +1,17 @@
 "use client";
 
 import { NavItem } from "./NavItem";
-import React, { useEffect, useRef, useState } from "react";
+import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 
 import MotionStack from "@/app/shared/components/MotionStack";
 import MotionTypography from "@/app/shared/components/MotionTypography";
+import { sectionName, SectionRefs } from "./navType";
 
-export const Navigation = () => {
+interface IProps {
+  scrollToSection: (section: SectionRefs) => void;
+}
+
+export const Navigation = ({ scrollToSection }: IProps) => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -57,6 +62,7 @@ export const Navigation = () => {
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           variant="subtitle1"
+          onClick={() => scrollToSection(sectionName.ABOUT)}
         >
           About
         </MotionTypography>
@@ -69,6 +75,7 @@ export const Navigation = () => {
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           variant="subtitle1"
+          onClick={() => scrollToSection(sectionName.SKILL)}
         >
           Skill
         </MotionTypography>
@@ -81,6 +88,7 @@ export const Navigation = () => {
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           variant="subtitle1"
+          onClick={() => scrollToSection(sectionName.EXPERIENCE)}
         >
           Experience
         </MotionTypography>
@@ -93,6 +101,7 @@ export const Navigation = () => {
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           variant="subtitle1"
+          onClick={() => scrollToSection(sectionName.WORK)}
         >
           Work
         </MotionTypography>
@@ -105,6 +114,7 @@ export const Navigation = () => {
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           variant="subtitle1"
+          onClick={() => scrollToSection(sectionName.CONTACT)}
         >
           Contact
         </MotionTypography>

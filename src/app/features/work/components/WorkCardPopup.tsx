@@ -1,3 +1,5 @@
+"use client";
+
 import MotionStack from "@/app/shared/components/MotionStack";
 import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
 import { CardContent } from "@mui/material";
