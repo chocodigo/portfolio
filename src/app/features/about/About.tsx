@@ -10,6 +10,28 @@ import CallIcon from "@mui/icons-material/Call";
 import { Title } from "@/app/shared/components/Title";
 
 export const About = () => {
+  const phoneNumber = "010-2741-1149";
+  const isMobileDevice = () => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    return /android|iphone|ipad|ipod/i.test(userAgent);
+  };
+
+  const handleCall = () => {
+    if (isMobileDevice()) {
+      // 모바일 기기라면 전화 앱 실행
+      window.location.href = `tel:${phoneNumber}`;
+    } else {
+      // 데스크탑이라면 전화번호 복사
+      navigator.clipboard
+        .writeText(phoneNumber)
+        .then(() => {
+          alert("전화번호가 복사되었습니다.");
+        })
+        .catch((err) => {
+          console.error("복사 실패:", err);
+        });
+    }
+  };
   return (
     <MotionStack
       sx={{
@@ -65,16 +87,30 @@ export const About = () => {
           </MotionStack>
 
           <MotionStack sx={{ flexDirection: "row", gap: "10px" }}>
-            <IconButton sx={{ padding: 0, width: "20px", height: "20px" }}>
+            <IconButton
+              sx={{ padding: 0, width: "20px", height: "20px" }}
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/haerim-choi-ab782b261")
+              }
+            >
               <LinkedInIcon fontSize="small" />
             </IconButton>
-            <IconButton sx={{ padding: 0, width: "20px", height: "20px" }}>
+            <IconButton
+              sx={{ padding: 0, width: "20px", height: "20px" }}
+              onClick={() => window.open("https://github.com/chocodigo")}
+            >
               <GitHubIcon fontSize="small" />
             </IconButton>
-            <IconButton sx={{ padding: 0, width: "20px", height: "20px" }}>
+            <IconButton
+              sx={{ padding: 0, width: "20px", height: "20px" }}
+              onClick={() => window.open("https://open.kakao.com/o/sDXbxqNg")}
+            >
               <ChatBubbleIcon fontSize="small" />
             </IconButton>
-            <IconButton sx={{ padding: 0, width: "20px", height: "20px" }}>
+            <IconButton
+              sx={{ padding: 0, width: "20px", height: "20px" }}
+              onClick={handleCall}
+            >
               <CallIcon fontSize="small" />
             </IconButton>
           </MotionStack>
