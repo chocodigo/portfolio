@@ -49,6 +49,8 @@ export const ContactForm = () => {
               message: "Invalid email format",
             },
           })}
+          error={!!errors.email}
+          helperText={errors.email?.message || ""}
         />
         {errors.email && <p>{errors.email.message}</p>}
         <TextField
