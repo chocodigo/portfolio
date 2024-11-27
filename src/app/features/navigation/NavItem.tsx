@@ -2,9 +2,15 @@
 
 import { Stack } from "@mui/material";
 
-export const NavItem = ({ children }: { children: React.ReactNode }) => {
+interface IProps {
+  children: React.ReactNode;
+  onClick: () => void;
+}
+
+export const NavItem = ({ children, onClick }: IProps) => {
   return (
     <Stack
+      onClick={onClick}
       sx={{
         justifyContent: "center",
         alignItems: "center",

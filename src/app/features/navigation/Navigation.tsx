@@ -63,7 +63,7 @@ export const Navigation = ({ scrollToSection }: IProps) => {
           zIndex: 100,
         }}
       >
-        <NavItem>
+        <NavItem onClick={() => scrollToSection(sectionName.ABOUT)}>
           <MotionTypography
             sx={{ fontSize: "14px" }}
             animate={{
@@ -71,12 +71,11 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
-            onClick={() => scrollToSection(sectionName.ABOUT)}
           >
             About
           </MotionTypography>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={() => scrollToSection(sectionName.SKILL)}>
           <MotionTypography
             sx={{ fontSize: "14px" }}
             animate={{
@@ -84,12 +83,11 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
-            onClick={() => scrollToSection(sectionName.SKILL)}
           >
             Skill
           </MotionTypography>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={() => scrollToSection(sectionName.EXPERIENCE)}>
           <MotionTypography
             sx={{ fontSize: "14px" }}
             animate={{
@@ -97,12 +95,11 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
-            onClick={() => scrollToSection(sectionName.EXPERIENCE)}
           >
             Experience
           </MotionTypography>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={() => scrollToSection(sectionName.WORK)}>
           <MotionTypography
             sx={{ fontSize: "14px" }}
             animate={{
@@ -110,12 +107,11 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
-            onClick={() => scrollToSection(sectionName.WORK)}
           >
             Work
           </MotionTypography>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={() => scrollToSection(sectionName.CONTACT)}>
           <MotionTypography
             sx={{ fontSize: "14px" }}
             animate={{
@@ -123,7 +119,6 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
-            onClick={() => scrollToSection(sectionName.CONTACT)}
           >
             Contact
           </MotionTypography>
