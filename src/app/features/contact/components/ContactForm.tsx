@@ -1,12 +1,15 @@
+"use client";
+
 import MotionStack from "@/app/shared/components/MotionStack";
 import { Button, TextField } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { sendEmail } from "../api/sendEmail";
 
 type Inputs = {
   name: string;
   email: string;
-  contents: string;
+  message: string;
 };
 
 export const ContactForm = () => {
@@ -16,7 +19,9 @@ export const ContactForm = () => {
     watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    sendEmail(data);
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -58,7 +63,7 @@ export const ContactForm = () => {
           multiline
           variant="filled"
           rows={7}
-          {...register("contents")}
+          {...register("message")}
         />
         <Button
           type={"submit"}
