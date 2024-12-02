@@ -4,6 +4,7 @@ import { useNotionResponse } from "./api/useNotionResponse";
 import "react-notion-x/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 import "katex/dist/katex.min.css";
+import { GradientCircularProgress } from "@/app/shared/components/Loading";
 
 interface NotionProps {
   id: string | "";
@@ -18,7 +19,7 @@ export const Notion = ({ id }: NotionProps) => {
         padding: "16px",
       }}
     >
-      {isLoading && <>Loading ...</>}
+      {isLoading && <GradientCircularProgress />}
       {data?.data && (
         <NotionRenderer
           recordMap={data.data}
