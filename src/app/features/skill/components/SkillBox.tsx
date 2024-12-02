@@ -2,10 +2,12 @@
 
 import MotionStack from "@/app/shared/components/MotionStack";
 import MotionTypography from "@/app/shared/components/MotionTypography";
+import React, { useState } from "react";
+import { IconProps } from "../types/iconProps";
 
 export interface SkillBoxProps {
   name: string;
-  icon: React.ReactNode;
+  icon: React.ReactElement<IconProps>;
   index: number;
   isLast: boolean;
 }
@@ -19,6 +21,8 @@ const backgroundColorList = [
 ];
 
 export const SkillBox = ({ name, icon, index, isLast }: SkillBoxProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <MotionStack
       sx={{
@@ -34,8 +38,10 @@ export const SkillBox = ({ name, icon, index, isLast }: SkillBoxProps) => {
         borderBottomRightRadius: isLast ? "8px" : 0,
         textAlign: "center",
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {icon}
+      {React.isValidElement(icon) && React.cloneElement(icon, { isHovered })}
       <MotionTypography sx={{ fontSize: "12px" }}>{name}</MotionTypography>
     </MotionStack>
   );
