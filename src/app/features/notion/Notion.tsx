@@ -1,5 +1,4 @@
 import { NotionRenderer } from "react-notion-x";
-// import { NotionRenderer } from "react-notion";
 import { Stack } from "@mui/material";
 import { useNotionResponse } from "./api/useNotionResponse";
 import "react-notion-x/src/styles.css";
@@ -23,7 +22,6 @@ export const Notion = ({ id }: NotionProps) => {
       {data?.data && (
         <NotionRenderer
           recordMap={data.data}
-          // blockMap={data.data}
           fullPage={true}
           rootPageId={id}
           isImageZoomable={false}
