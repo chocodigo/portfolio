@@ -1,9 +1,12 @@
 import { SkillListProps } from "../components/SkillList";
 import { AndroidIcon } from "../Icons/AndroidIcon";
+import { AWSIcon } from "../Icons/AWSIcon";
+import { AzureIcon } from "../Icons/AzureIcon";
 import { CSSIcon } from "../Icons/CSSIcon";
 import { DesignSystemIcon } from "../Icons/DesignSystemIcon";
 import { DevExtremeIcon } from "../Icons/DevExtremeIcon";
 import { ElectronIcon } from "../Icons/ElectronIcon";
+import { FirebaseIcon } from "../Icons/FirebaseIcon";
 import { HTMLIcon } from "../Icons/HTMLIcon";
 import { IonicIcon } from "../Icons/IonicIcon";
 import { JavaIcon } from "../Icons/JavaIcon";
@@ -27,61 +30,75 @@ export const dataList: SkillListProps[] = [
   {
     title: "Languages and Core Technologies",
     list: [
-      { icon: <JSIcon />, name: "Javascript" },
-      { icon: <TSIcon />, name: "Typescript" },
-      { icon: <JavaIcon />, name: "Java" },
-      { icon: <HTMLIcon />, name: "HTML" },
-      { icon: <CSSIcon />, name: "CSS" },
+      { icon: <JSIcon isHovered={false} />, name: "Javascript" },
+      { icon: <TSIcon isHovered={false} />, name: "Typescript" },
+      { icon: <JavaIcon isHovered={false} />, name: "Java" },
+      { icon: <HTMLIcon isHovered={false} />, name: "HTML" },
+      { icon: <CSSIcon isHovered={false} />, name: "CSS" },
     ],
   },
   {
     title: "Frontend Frameworks and Libraries",
     list: [
-      { icon: <ReactIcon />, name: "React.js" },
-      { icon: <ElectronIcon />, name: "Electron" },
-      { icon: <NextJSIcon />, name: "Next.js" },
-      { icon: <IonicIcon />, name: "ionic" },
+      { icon: <ReactIcon isHovered={false} />, name: "React.js" },
+      { icon: <ElectronIcon isHovered={false} />, name: "Electron" },
+      { icon: <NextJSIcon isHovered={false} />, name: "Next.js" },
+      { icon: <IonicIcon isHovered={false} />, name: "ionic" },
     ],
   },
   {
     title: "Styling Tools and Libraries",
     list: [
-      { icon: <SassIcon />, name: "Sass" },
-      { icon: <StyledComponents />, name: "styled components" },
-      { icon: <MUIIcon />, name: "MUI library" },
-      { icon: <DevExtremeIcon />, name: "DevExtreme library" },
+      { icon: <SassIcon isHovered={false} />, name: "Sass" },
+      {
+        icon: <StyledComponents isHovered={false} />,
+        name: "styled components",
+      },
+      { icon: <MUIIcon isHovered={false} />, name: "MUI library" },
+      {
+        icon: <DevExtremeIcon isHovered={false} />,
+        name: "DevExtreme library",
+      },
     ],
   },
   {
     title: "State Management Libraries",
     list: [
-      { icon: <ReactIcon />, name: "Context API" },
-      { icon: <MobxIcon />, name: "Mobx" },
-      { icon: <RecoilIcon />, name: "Recoil" },
-      { icon: <ZustandIcon />, name: "Zustand" },
+      { icon: <ReactIcon isHovered={false} />, name: "Context API" },
+      { icon: <MobxIcon isHovered={false} />, name: "Mobx" },
+      { icon: <RecoilIcon isHovered={false} />, name: "Recoil" },
+      { icon: <ZustandIcon isHovered={false} />, name: "Zustand" },
     ],
   },
   {
     title: "Build and Module Management",
     list: [
-      { icon: <DesignSystemIcon />, name: "Design System" },
-      { icon: <MonorepoIcon />, name: "Monorepo" },
-      { icon: <StorybookIcon />, name: "Storybook" },
+      { icon: <DesignSystemIcon isHovered={false} />, name: "Design System" },
+      { icon: <MonorepoIcon isHovered={false} />, name: "Monorepo" },
+      { icon: <StorybookIcon isHovered={false} />, name: "Storybook" },
     ],
   },
   {
     title: "Backend Technologies",
     list: [
-      { icon: <SpringBoot />, name: "Spring Boot" },
-      { icon: <NodeJSIcon />, name: "Node.js" },
-      { icon: <NestJSIcon />, name: "NestJS" },
+      { icon: <SpringBoot isHovered={false} />, name: "Spring Boot" },
+      { icon: <NodeJSIcon isHovered={false} />, name: "Node.js" },
+      { icon: <NestJSIcon isHovered={false} />, name: "NestJS" },
     ],
   },
   {
     title: "Mobile and Hybrid Applications",
     list: [
-      { icon: <IonicIcon />, name: "ionic" },
-      { icon: <AndroidIcon />, name: "Android" },
+      { icon: <IonicIcon isHovered={false} />, name: "ionic" },
+      { icon: <AndroidIcon isHovered={false} />, name: "Android" },
+    ],
+  },
+  {
+    title: "Cloud",
+    list: [
+      { icon: <AWSIcon isHovered={false} />, name: "AWS" },
+      { icon: <FirebaseIcon isHovered={false} />, name: "firebase" },
+      { icon: <AzureIcon isHovered={false} />, name: "Azure" },
     ],
   },
 ];
