@@ -12,7 +12,7 @@ import { Title } from "@/app/shared/components/Title";
 export const About = () => {
   const phoneNumber = "010-2741-1149";
   const isMobileDevice = () => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const userAgent = navigator.userAgent;
     return /android|iphone|ipad|ipod/i.test(userAgent);
   };
 

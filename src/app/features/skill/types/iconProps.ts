@@ -1,4 +1,4 @@
 export interface IconProps {
-  isHovered: boolean;
+  isHovered?: boolean;
   // transition: { duration: number; ease: string };
 }

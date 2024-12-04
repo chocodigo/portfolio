@@ -4,7 +4,7 @@ import { Stack } from "@mui/material";
 import { Body, Header } from "./features";
 import { WorkCardPopup } from "./features/work";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { purple } from "@mui/material/colors";

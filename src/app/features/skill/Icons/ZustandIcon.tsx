@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { IconProps } from "../types/iconProps";
 
-export const ZustandIcon: React.FC<IconProps> = ({ isHovered }) => {
+export const ZustandIcon: React.FC<IconProps> = () => {
   return (
     <motion.div whileHover={{ scale: 1.2 }}>
       <svg

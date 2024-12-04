@@ -42,7 +42,6 @@ export const ExperienceTimeLine = () => {
         subtitle="웹 프론트엔드 담당, 백엔드 담당, 웹사이드 cad 서브담당"
         duration="2023.05 - 2024.09"
         icon={<TeethIcon />}
-        isEnd={true}
       />
     </Timeline>
   );

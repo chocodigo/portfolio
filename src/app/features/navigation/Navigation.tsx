@@ -1,7 +1,7 @@
 "use client";
 
 import { NavItem } from "./NavItem";
-import React, { MutableRefObject, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import MotionStack from "@/app/shared/components/MotionStack";
 import MotionTypography from "@/app/shared/components/MotionTypography";

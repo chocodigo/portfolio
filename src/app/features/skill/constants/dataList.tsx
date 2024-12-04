@@ -67,7 +67,7 @@ export const dataList: SkillListProps[] = [
       { icon: <ReactIcon isHovered={false} />, name: "Context API" },
       { icon: <MobxIcon isHovered={false} />, name: "Mobx" },
       { icon: <RecoilIcon isHovered={false} />, name: "Recoil" },
-      { icon: <ZustandIcon isHovered={false} />, name: "Zustand" },
+      { icon: <ZustandIcon />, name: "Zustand" },
     ],
   },
   {

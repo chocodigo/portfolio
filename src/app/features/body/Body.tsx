@@ -5,7 +5,7 @@ import { About } from "../about";
 import { Skill } from "../skill";
 import { Experience } from "../experience";
 import { Work } from "../work";
-import { MutableRefObject, useRef } from "react";
+import { useRef } from "react";
 import { sectionName, SectionRefs } from "../navigation/navType";
 import { Contact } from "../contact";
 

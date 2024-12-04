@@ -1,6 +1,6 @@
 "use client";
 import MotionStack from "@/app/shared/components/MotionStack";
-import { Avatar, Stack, Typography } from "@mui/material";
+import { Avatar, Typography } from "@mui/material";
 
 export const Header = () => {
   return (

@@ -6,7 +6,6 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { Icon } from "@mui/material";
-import GavelIcon from "@mui/icons-material/Gavel";
 import MotionTypography from "@/app/shared/components/MotionTypography";
 import MotionStack from "@/app/shared/components/MotionStack";
 
@@ -16,7 +15,6 @@ interface IProps {
   subtitle: string;
   duration: string;
   isFirst?: boolean;
-  isEnd?: boolean;
 }
 
 export const TimeDot = ({
@@ -25,7 +23,6 @@ export const TimeDot = ({
   subtitle,
   duration,
   isFirst,
-  isEnd,
 }: IProps) => {
   return (
     <TimelineItem>
