@@ -24,7 +24,7 @@ export const RecoilIcon: React.FC<IconProps> = ({ isHovered }) => {
             fill="#FFFFFF"
             fillOpacity="1"
             stroke="rgba(255, 255, 255, 0.69)"
-            initial={{ pathLength: isHovered ? 0.001 : 1 }}
+            initial={{ pathLength: isHovered ? 0.001 : 1, strokeOpacity: 0 }}
             animate={{
               pathLength: isHovered ? 1 : 0,
               fillOpacity: isHovered ? [0, 1] : 1,
@@ -39,7 +39,7 @@ export const RecoilIcon: React.FC<IconProps> = ({ isHovered }) => {
             fill="#FFFFFF"
             fillOpacity="1"
             stroke="rgba(255, 255, 255, 0.69)"
-            initial={{ pathLength: isHovered ? 0.001 : 1 }}
+            initial={{ pathLength: isHovered ? 0.001 : 1, strokeOpacity: 0 }}
             animate={{
               pathLength: isHovered ? 1 : 0,
               fillOpacity: isHovered ? [0, 1] : 1,
@@ -54,7 +54,7 @@ export const RecoilIcon: React.FC<IconProps> = ({ isHovered }) => {
             fill="#FFFFFF"
             fillOpacity="1"
             stroke="rgba(255, 255, 255, 0.69)"
-            initial={{ pathLength: isHovered ? 0.001 : 1 }}
+            initial={{ pathLength: isHovered ? 0.001 : 1, strokeOpacity: 0 }}
             animate={{
               pathLength: isHovered ? 1 : 0,
               fillOpacity: isHovered ? [0, 1] : 1,
