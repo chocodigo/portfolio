@@ -13,7 +13,7 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
     <MotionStack sx={{ gap: "8px" }}>
       <MotionStack
         sx={{
-          flexDirection: "row",
+          flexDirection: { lg: "row", xs: "column" },
           justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
@@ -42,7 +42,10 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
 
       <Grid2 container spacing={1}>
         {dataList.map((item, index) => (
-          <Grid2 size={4} key={`${jobName}_${item.title}_${index}`}>
+          <Grid2
+            size={{ lg: 4, xs: 12 }}
+            key={`${jobName}_${item.title}_${index}`}
+          >
             <MotionStack
               layoutId={item.title}
               onClick={async () => {

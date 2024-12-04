@@ -26,15 +26,22 @@ export const SkillBox = ({ name, icon, index, isLast }: SkillBoxProps) => {
   return (
     <MotionStack
       sx={{
-        width: "100px",
+        width: { lg: "100px", xs: "100%" },
         height: "100px",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: backgroundColorList[index % 5],
         color: "#ffffff",
         borderTopLeftRadius: index === 0 ? "8px" : 0,
-        borderBottomLeftRadius: index === 0 ? "8px" : 0,
-        borderTopRightRadius: isLast ? "8px" : 0,
+
+        borderBottomLeftRadius: {
+          lg: index === 0 ? "8px" : 0,
+          xs: isLast ? "8px" : 0,
+        },
+        borderTopRightRadius: {
+          lg: isLast ? "8px" : 0,
+          xs: index === 0 ? "8px" : 0,
+        },
         borderBottomRightRadius: isLast ? "8px" : 0,
         textAlign: "center",
       }}

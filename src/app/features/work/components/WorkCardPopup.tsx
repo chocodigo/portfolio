@@ -36,14 +36,14 @@ export const WorkCardPopup = () => {
             <MotionCard
               layoutId={selectedPopupId}
               sx={{
-                width: "800px",
+                width: { lg: "800px", xs: "90%" },
                 height: "90%",
                 overflowY: "auto",
                 clipPath: "inset(0 round 4px)",
               }}
               onClick={(e) => e.stopPropagation()}
             >
-              <CardContent>
+              <CardContent sx={{ padding: 0 }}>
                 <Notion id={notionId} />
               </CardContent>
             </MotionCard>
