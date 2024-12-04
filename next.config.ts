@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
   experimental: {
     esmExternals: true, // ESM 모듈 외부화 지원 활성화
   },
+  output: "export",
+  basePath: "/portfolio",
 };
 
 export default nextConfig;
