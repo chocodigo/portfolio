@@ -34,7 +34,7 @@ export default function Home() {
   const bodyRef = useRef<HTMLDivElement | null>(null);
 
   const handleScroll = () => {
-    if (document.body.scrollTop === 0) {
+    if (typeof window !== "undefined" && document.body.scrollTop === 0) {
       setIsTop(true);
     } else {
       setIsTop(false);
