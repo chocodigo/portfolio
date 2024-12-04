@@ -52,6 +52,8 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
                 updateNotionId(item.notionId);
                 updateSelectedPopupId(item.title);
               }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
               <Card sx={{ cursor: "pointer" }}>
                 <CardMedia component={"img"} height="140" image={item.image} />
