@@ -19,12 +19,11 @@ export const Navigation = ({ scrollToSection }: IProps) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // placeholderRef가 뷰포트와 교차하지 않을 때 (즉, 상단에 고정되었을 때)
         setIsSticky(!entry.isIntersecting);
       },
       {
-        root: null, // 뷰포트를 기준으로
-        threshold: 0, // 요소가 살짝이라도 보이면 isIntersecting = true
+        root: null,
+        threshold: 0,
       }
     );
 
