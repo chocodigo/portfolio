@@ -66,7 +66,7 @@ export const Body = () => {
       sx={{
         marginTop: "64px",
         borderRadius: "4px",
-        width: "864px",
+        width: { xs: "380px", lg: "864px" },
         marginBottom: "64px",
       }}
     >

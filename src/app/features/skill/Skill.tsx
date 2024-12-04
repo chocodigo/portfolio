@@ -11,9 +11,9 @@ export const Skill = () => {
       sx={{
         background: "#ffffff",
         width: "100%",
-        padding: "80px 80px 48px 80px",
         gap: "30px",
         borderBottom: "1px solid #DDDDDD",
+        padding: { lg: "80px 80px 48px 80px", xs: "48px 24px 16px 24px" },
       }}
     >
       <Title>Skill</Title>

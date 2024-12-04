@@ -36,17 +36,24 @@ export const About = () => {
     <MotionStack
       sx={{
         width: "100%",
-        padding: "80px 80px 48px 80px",
         background: "#fff",
-        flexDirection: "row",
-        justifyContent: "space-between",
+        padding: { lg: "80px 80px 48px 80px", xs: "48px 24px 16px 24px" },
+        flexDirection: { lg: "row", xs: "column-reverse" },
+        justifyContent: { lg: "space-between" },
+        alignItems: { xs: "center", lg: "flex-start" },
         borderBottom: "1px solid #DDDDDD",
       }}
     >
-      <MotionStack>
+      <MotionStack
+        sx={{
+          alignItems: { xs: "center", lg: "flex-start" },
+        }}
+      >
         <Title>About</Title>
 
-        <MotionStack sx={{ gap: "15px" }}>
+        <MotionStack
+          sx={{ gap: "15px", textAlign: { xs: "center", lg: "left" } }}
+        >
           <MotionTypography sx={{ fontSize: "14px", color: "#636363" }}>
             웹 개발자 최해림입니다.
             <br />
@@ -86,7 +93,13 @@ export const About = () => {
             </MotionStack>
           </MotionStack>
 
-          <MotionStack sx={{ flexDirection: "row", gap: "10px" }}>
+          <MotionStack
+            sx={{
+              flexDirection: "row",
+              gap: "10px",
+              justifyContent: { xs: "center", lg: "flex-start" },
+            }}
+          >
             <IconButton
               sx={{ padding: 0, width: "20px", height: "20px" }}
               onClick={() =>

@@ -10,7 +10,7 @@ export const Experience = () => {
       sx={{
         background: "#ffffff",
         width: "100%",
-        padding: "80px 80px 48px 80px",
+        padding: { lg: "80px 80px 48px 80px", xs: "48px 24px 16px 24px" },
         gap: "30px",
         borderBottom: "1px solid #DDDDDD",
       }}

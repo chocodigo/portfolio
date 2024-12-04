@@ -50,7 +50,7 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
                 updateSelectedPopupId(item.title);
               }}
             >
-              <Card>
+              <Card sx={{ cursor: "pointer" }}>
                 <CardMedia component={"img"} height="140" image={item.image} />
                 <CardContent>
                   <Typography sx={{ fontSize: "14px" }}>

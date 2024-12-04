@@ -14,7 +14,7 @@ export const NavItem = ({ children, onClick }: IProps) => {
       sx={{
         justifyContent: "center",
         alignItems: "center",
-        padding: "0 20px",
+        padding: { lg: "0 20px", xs: "0 12px" },
         color: "#636363",
         borderRadius: "8px",
         cursor: "pointer",
