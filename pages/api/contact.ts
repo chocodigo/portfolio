@@ -22,7 +22,7 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
       port: 587,
       secure: false, // TLS 사용
       auth: {
-        user: email, // 발신 이메일
+        user: process.env.NEXT_PUBLIC_EMAIL_USER, // 발신 이메일
         pass: process.env.NEXT_PUBLIC_EMAIL_PASS, // 발신 이메일 비밀번호 (앱 비밀번호 사용 추천)
       },
     });
@@ -35,7 +35,9 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
       text: message, // 이메일 본문
     });
 
-    res.status(200).json({ message: "Message sent successfully" });
+    res
+      .status(200)
+      .json({ message: `Message sent successfully from: ${name} <${email}` });
   } catch (error) {
     console.error("Error sending email:", error);
     res.status(500).json({ message: "Failed to send message" });
