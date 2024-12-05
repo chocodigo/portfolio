@@ -12,10 +12,7 @@ export const sendEmail = async ({ name, email, message }: IProps) => {
     email,
     message,
   };
-  const response = await axios.post(
-    "https://portfolio-qsfskuoi1-haerim-chois-projects.vercel.app/api/contact",
-    requestBody
-  );
+  const response = await axios.post("/api/contact", requestBody);
 
   return response;
 };
