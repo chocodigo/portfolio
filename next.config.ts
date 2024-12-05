@@ -14,7 +14,9 @@ const nextConfig: NextConfig = {
     esmExternals: true, // ESM 모듈 외부화 지원 활성화
   },
   output: "export",
-  assetPrefix: isProd ? "https://chocodigo.github.io/portfolio" : "",
+  assetPrefix: isProd
+    ? "https://portfolio-chocodigo-haerim-chois-projects.vercel.app"
+    : "",
 };
 
 export default nextConfig;
