@@ -32,7 +32,7 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
       from: `"${name}" <${email}>`, // 발신자 이름과 이메일
       to: process.env.NEXT_PUBLIC_RECEIVER_EMAIL, // 수신자 이메일
       subject: `New Contact Form Submission from ${name}`, // 이메일 제목
-      text: message, // 이메일 본문
+      text: `${message} from ${email}`, // 이메일 본문
     });
 
     res
