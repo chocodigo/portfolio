@@ -31,7 +31,7 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
     await transporter.sendMail({
       from: `"${name} (${email})" <${process.env.NEXT_PUBLIC_EMAIL_USER}>`, // 발신자 이름과 이메일
       to: process.env.NEXT_PUBLIC_RECEIVER_EMAIL, // 수신자 이메일
-      subject: `New Contact Form Submission from ${name}`, // 이메일 제목
+      subject: `${name} <${email}>`, // 이메일 제목
       text: `${message} from ${email}`, // 이메일 본문
     });
 
