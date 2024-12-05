@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
@@ -12,8 +14,7 @@ const nextConfig: NextConfig = {
     esmExternals: true, // ESM 모듈 외부화 지원 활성화
   },
   output: "export",
-  basePath: "/portfolio",
-  assetPrefix: "/portfolio",
+  assetPrefix: isProd ? "https://chocodigo.github.io/portfoilio" : "",
 };
 
 export default nextConfig;
