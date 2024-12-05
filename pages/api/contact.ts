@@ -33,6 +33,7 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
       to: process.env.NEXT_PUBLIC_RECEIVER_EMAIL, // 수신자 이메일
       subject: `${name} <${email}>`, // 이메일 제목
       text: `${message} from ${email}`, // 이메일 본문
+      replyTo: email,
     });
 
     res
