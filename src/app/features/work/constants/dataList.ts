@@ -75,7 +75,7 @@ export const dataList: JobGridType[] = [
       },
       {
         title: "Dentbird Crown",
-        image: "imagoworks/crown.png",
+        image: "imagoworks/crown_.png",
         notionId: "1496ab489f6e8068b5dfe802c5d9e320",
       },
       {
