@@ -5,6 +5,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  res.setHeader("Access-Control-Allow-Origin", "*"); // 모든 도메인 허용
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
   const { pageId } = req.query;
 
   // 타입 단언: pageId는 string이어야 함
