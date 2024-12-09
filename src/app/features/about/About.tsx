@@ -71,18 +71,6 @@ export const About = () => {
               <MotionTypography
                 sx={{ fontSize: "10px", color: "#636363", fontWeight: "300" }}
               >
-                Phone Number
-              </MotionTypography>
-              <MotionTypography
-                sx={{ fontSize: "10px", color: "#636363", fontWeight: "300" }}
-              >
-                010-2741-1149
-              </MotionTypography>
-            </MotionStack>
-            <MotionStack sx={{ gap: "4px" }}>
-              <MotionTypography
-                sx={{ fontSize: "10px", color: "#636363", fontWeight: "300" }}
-              >
                 Email
               </MotionTypography>
               <MotionTypography
@@ -119,12 +107,6 @@ export const About = () => {
               onClick={() => window.open("https://open.kakao.com/o/sDXbxqNg")}
             >
               <ChatBubbleIcon fontSize="small" />
-            </IconButton>
-            <IconButton
-              sx={{ padding: 0, width: "20px", height: "20px" }}
-              onClick={handleCall}
-            >
-              <CallIcon fontSize="small" />
             </IconButton>
           </MotionStack>
         </MotionStack>
