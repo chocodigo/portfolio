@@ -6,32 +6,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { IconButton } from "@mui/material";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
-import CallIcon from "@mui/icons-material/Call";
 import { Title } from "@/app/shared/components/Title";
 
 export const About = () => {
-  const phoneNumber = "010-2741-1149";
-  const isMobileDevice = () => {
-    const userAgent = navigator.userAgent;
-    return /android|iphone|ipad|ipod/i.test(userAgent);
-  };
-
-  const handleCall = () => {
-    if (isMobileDevice()) {
-      // 모바일 기기라면 전화 앱 실행
-      window.location.href = `tel:${phoneNumber}`;
-    } else {
-      // 데스크탑이라면 전화번호 복사
-      navigator.clipboard
-        .writeText(phoneNumber)
-        .then(() => {
-          alert("전화번호가 복사되었습니다.");
-        })
-        .catch((err) => {
-          console.error("복사 실패:", err);
-        });
-    }
-  };
   return (
     <MotionStack
       sx={{
