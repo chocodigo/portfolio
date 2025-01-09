@@ -34,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
+      <meta name="naver-site-verification" content="44fc0decccc432a361ead77cfac59dd0be22486e" />
       <body>{children}</body>
     </html>
   );
