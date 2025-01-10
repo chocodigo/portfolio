@@ -10,7 +10,6 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { purple } from "@mui/material/colors";
 import { useEffect, useRef, useState } from "react";
 import Zoom from "@mui/material/Zoom";
-import Head from "next/head";
 
 const theme = createTheme({
   breakpoints: {
