@@ -16,7 +16,7 @@ export const Contact = () => {
         borderBottomRightRadius: "4px",
       }}
     >
-      <Title>Contact</Title>
+      <Title>연락하기</Title>
       <ContactForm />
     </MotionStack>
   );

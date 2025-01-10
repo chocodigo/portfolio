@@ -71,7 +71,7 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
           >
-            About
+            소개
           </MotionTypography>
         </NavItem>
         <NavItem onClick={() => scrollToSection(sectionName.SKILL)}>
@@ -83,7 +83,7 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
           >
-            Skill
+            기술 스택
           </MotionTypography>
         </NavItem>
         <NavItem onClick={() => scrollToSection(sectionName.EXPERIENCE)}>
@@ -95,7 +95,7 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
           >
-            Experience
+            경력
           </MotionTypography>
         </NavItem>
         <NavItem onClick={() => scrollToSection(sectionName.WORK)}>
@@ -107,7 +107,7 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
           >
-            Work
+            작업물
           </MotionTypography>
         </NavItem>
         <NavItem onClick={() => scrollToSection(sectionName.CONTACT)}>
@@ -119,7 +119,7 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             transition={{ duration: 0.2, ease: "easeOut" }}
             variant="subtitle1"
           >
-            Contact
+            연락하기
           </MotionTypography>
         </NavItem>
       </MotionStack>

@@ -17,7 +17,7 @@ export const Skill = () => {
         alignItems: { xs: "center", lg: "flex-start" },
       }}
     >
-      <Title>Skill</Title>
+      <Title>기술 스택</Title>
       <MotionStack sx={{ gap: "30px", width: "100%" }}>
         {dataList.map((item, index) => (
           <SkillList

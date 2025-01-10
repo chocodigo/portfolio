@@ -19,14 +19,16 @@ export const About = () => {
         justifyContent: { lg: "space-between" },
         alignItems: { xs: "center", lg: "flex-start" },
         borderBottom: "1px solid #DDDDDD",
+        gap: {xs: '10px'}
       }}
     >
       <MotionStack
         sx={{
           alignItems: { xs: "center", lg: "flex-start" },
+          
         }}
       >
-        <Title>About</Title>
+        <Title>소개</Title>
 
         <MotionStack
           sx={{ gap: "15px", textAlign: { xs: "center", lg: "left" } }}

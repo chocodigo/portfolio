@@ -3,9 +3,9 @@ import MotionTypography from "./MotionTypography";
 
 export const Title = ({ children }: { children: React.ReactNode }) => {
   return (
-    <MotionStack sx={{ gap: 0 }}>
+    <MotionStack sx={{ gap: 0, alignItems: {xs: 'center', lg: 'flex-start'} }}>
       <MotionTypography
-        sx={{ fontSize: "24px", color: "#636363", fontWeight: "300" }}
+        sx={{ fontSize: "24px", color: "#636363", fontWeight: "500" }}
       >
         {children}
       </MotionTypography>

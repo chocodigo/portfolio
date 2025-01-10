@@ -16,7 +16,7 @@ export const Work = () => {
         borderBottom: "1px solid #DDDDDD",
       }}
     >
-      <Title>Work</Title>
+      <Title>작업물</Title>
       {dataList.map((item, index) => (
         <WorkGrid
           key={`WorkGrid_${index}`}

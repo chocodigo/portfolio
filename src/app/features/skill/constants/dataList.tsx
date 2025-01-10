@@ -28,7 +28,7 @@ import { ZustandIcon } from "../Icons/ZustandIcon";
 
 export const dataList: SkillListProps[] = [
   {
-    title: "Languages and Core Technologies",
+    title: "언어 및 핵심기술",
     list: [
       { icon: <JSIcon isHovered={false} />, name: "Javascript" },
       { icon: <TSIcon isHovered={false} />, name: "Typescript" },
@@ -38,7 +38,7 @@ export const dataList: SkillListProps[] = [
     ],
   },
   {
-    title: "Frontend Frameworks and Libraries",
+    title: "프론트엔드 프레임워크 및 라이브러리",
     list: [
       { icon: <ReactIcon isHovered={false} />, name: "React.js" },
       { icon: <ElectronIcon isHovered={false} />, name: "Electron" },
@@ -47,7 +47,7 @@ export const dataList: SkillListProps[] = [
     ],
   },
   {
-    title: "Styling Tools and Libraries",
+    title: "스타일링 도구 및 라이브러리",
     list: [
       { icon: <SassIcon isHovered={false} />, name: "Sass" },
       {
@@ -62,7 +62,7 @@ export const dataList: SkillListProps[] = [
     ],
   },
   {
-    title: "State Management Libraries",
+    title: "상태 관리 라이브러리",
     list: [
       { icon: <ReactIcon isHovered={false} />, name: "Context API" },
       { icon: <MobxIcon isHovered={false} />, name: "Mobx" },
@@ -71,30 +71,30 @@ export const dataList: SkillListProps[] = [
     ],
   },
   {
-    title: "Build and Module Management",
+    title: "빌드 및 모듈 관리 도구",
     list: [
       { icon: <DesignSystemIcon isHovered={false} />, name: "Design System" },
       { icon: <MonorepoIcon isHovered={false} />, name: "Monorepo" },
       { icon: <StorybookIcon isHovered={false} />, name: "Storybook" },
     ],
   },
+  // {
+  //   title: "Backend Technologies",
+  //   list: [
+  //     { icon: <SpringBoot isHovered={false} />, name: "Spring Boot" },
+  //     { icon: <NodeJSIcon isHovered={false} />, name: "Node.js" },
+  //     { icon: <NestJSIcon isHovered={false} />, name: "NestJS" },
+  //   ],
+  // },
+  // {
+  //   title: "Mobile and Hybrid Applications",
+  //   list: [
+  //     { icon: <IonicIcon isHovered={false} />, name: "ionic" },
+  //     { icon: <AndroidIcon isHovered={false} />, name: "Android" },
+  //   ],
+  // },
   {
-    title: "Backend Technologies",
-    list: [
-      { icon: <SpringBoot isHovered={false} />, name: "Spring Boot" },
-      { icon: <NodeJSIcon isHovered={false} />, name: "Node.js" },
-      { icon: <NestJSIcon isHovered={false} />, name: "NestJS" },
-    ],
-  },
-  {
-    title: "Mobile and Hybrid Applications",
-    list: [
-      { icon: <IonicIcon isHovered={false} />, name: "ionic" },
-      { icon: <AndroidIcon isHovered={false} />, name: "Android" },
-    ],
-  },
-  {
-    title: "Cloud",
+    title: "클라우드",
     list: [
       { icon: <AWSIcon isHovered={false} />, name: "AWS" },
       { icon: <FirebaseIcon isHovered={false} />, name: "firebase" },

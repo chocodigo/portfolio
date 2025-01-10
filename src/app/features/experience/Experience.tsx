@@ -15,7 +15,7 @@ export const Experience = () => {
         borderBottom: "1px solid #DDDDDD",
       }}
     >
-      <Title>Experience</Title>
+      <Title>경력</Title>
       <ExperienceTimeLine />
     </MotionStack>
   );
