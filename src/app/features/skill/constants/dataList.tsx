@@ -78,21 +78,21 @@ export const dataList: SkillListProps[] = [
       { icon: <StorybookIcon isHovered={false} />, name: "Storybook" },
     ],
   },
-  // {
-  //   title: "Backend Technologies",
-  //   list: [
-  //     { icon: <SpringBoot isHovered={false} />, name: "Spring Boot" },
-  //     { icon: <NodeJSIcon isHovered={false} />, name: "Node.js" },
-  //     { icon: <NestJSIcon isHovered={false} />, name: "NestJS" },
-  //   ],
-  // },
-  // {
-  //   title: "Mobile and Hybrid Applications",
-  //   list: [
-  //     { icon: <IonicIcon isHovered={false} />, name: "ionic" },
-  //     { icon: <AndroidIcon isHovered={false} />, name: "Android" },
-  //   ],
-  // },
+  {
+    title: "Backend Technologies",
+    list: [
+      { icon: <SpringBoot isHovered={false} />, name: "Spring Boot" },
+      { icon: <NodeJSIcon isHovered={false} />, name: "Node.js" },
+      { icon: <NestJSIcon isHovered={false} />, name: "NestJS" },
+    ],
+  },
+  {
+    title: "Mobile and Hybrid Applications",
+    list: [
+      { icon: <IonicIcon isHovered={false} />, name: "ionic" },
+      { icon: <AndroidIcon isHovered={false} />, name: "Android" },
+    ],
+  },
   {
     title: "클라우드",
     list: [

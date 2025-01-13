@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
   assetPrefix: isProd
     ? "https://portfolio-chocodigo-haerim-chois-projects.vercel.app"
     : "",
+    
 };
 
 export default nextConfig;

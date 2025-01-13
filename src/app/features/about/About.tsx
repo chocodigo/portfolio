@@ -19,7 +19,7 @@ export const About = () => {
         justifyContent: { lg: "space-between" },
         alignItems: { xs: "center", lg: "flex-start" },
         borderBottom: "1px solid #DDDDDD",
-        gap: {xs: '10px'}
+        gap: {xs: '10px'} 
       }}
     >
       <MotionStack
