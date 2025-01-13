@@ -79,7 +79,7 @@ export const dataList: SkillListProps[] = [
     ],
   },
   {
-    title: "Backend Technologies",
+    title: "백엔드 기술",
     list: [
       { icon: <SpringBoot isHovered={false} />, name: "Spring Boot" },
       { icon: <NodeJSIcon isHovered={false} />, name: "Node.js" },
@@ -87,7 +87,7 @@ export const dataList: SkillListProps[] = [
     ],
   },
   {
-    title: "Mobile and Hybrid Applications",
+    title: "모바일 및 하이브리드 애플리케이션",
     list: [
       { icon: <IonicIcon isHovered={false} />, name: "ionic" },
       { icon: <AndroidIcon isHovered={false} />, name: "Android" },
