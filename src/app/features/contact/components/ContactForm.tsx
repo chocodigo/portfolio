@@ -4,7 +4,8 @@ import MotionStack from "@/app/shared/components/MotionStack";
 import { Button, TextField } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { sendEmail } from "../api/sendEmail";
+import { useSendEmail } from "../api/useSendEmail";
+import LoadingButton from "@mui/lab/LoadingButton";
 
 type Inputs = {
   name: string;
@@ -16,11 +17,17 @@ export const ContactForm = () => {
   const {
     register,
     handleSubmit,
-
+    reset,
     formState: { errors },
   } = useForm<Inputs>();
+
+  const { mutate, isPending } = useSendEmail(() => {
+    console.log("success");
+    reset();
+  });
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    sendEmail(data);
+    mutate(data);
   };
 
   return (
@@ -65,16 +72,18 @@ export const ContactForm = () => {
           rows={7}
           {...register("message")}
         />
-        <Button
+        <LoadingButton
           type={"submit"}
           startIcon={<SendIcon />}
-          variant={"contained"}
+          varia-nt={"contained"}
           sx={{
             background: "#CE9EAB",
+            color: "white",
           }}
+          loading={isPending}
         >
           Send Message
-        </Button>
+        </LoadingButton>
       </MotionStack>
     </form>
   );

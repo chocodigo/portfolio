@@ -1,12 +1,12 @@
 import axios from "axios";
 
-interface IProps {
+interface ISendEmailProps {
   name: string;
   email: string;
   message: string;
 }
 
-export const sendEmail = async ({ name, email, message }: IProps) => {
+export const sendEmail = async ({ name, email, message }: ISendEmailProps) => {
   const requestBody = {
     name,
     email,
