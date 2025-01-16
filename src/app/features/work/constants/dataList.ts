@@ -4,6 +4,7 @@ export const dataList: JobGridType[] = [
   {
     jobName: "태양법률사무소 개발자",
     duration: "2018.03 - 2020.07",
+    date: new Date(2018, 3),
     dataList: [
       {
         title: "법률사무소 어플리케이션",
@@ -25,6 +26,7 @@ export const dataList: JobGridType[] = [
   {
     jobName: "Nara Controls 프론트엔드 개발자",
     duration: "2021.08 - 2021.10",
+    date: new Date(2021, 8),
     dataList: [
       {
         title: "Nara Cloud - BMS",
@@ -56,6 +58,7 @@ export const dataList: JobGridType[] = [
   {
     jobName: "원더피플 웹 프론트엔드 개발자",
     duration: "2022.02 - 2023.01",
+    date: new Date(2022, 2),
     dataList: [
       {
         title: "슈퍼피플, 슈퍼피플2",
@@ -67,6 +70,7 @@ export const dataList: JobGridType[] = [
   {
     jobName: "Imagoworks 프론트엔드 개발자",
     duration: "2023.05 - 2024.09",
+    date: new Date(2023, 5),
     dataList: [
       {
         title: "Dentbird Desktop App for Medit Link",
@@ -93,6 +97,7 @@ export const dataList: JobGridType[] = [
   {
     jobName: "사이드 프로젝트",
     duration: "",
+    date: new Date(2000, 1),
     dataList: [
       {
         title: "커피 유형 테스트",
@@ -101,4 +106,4 @@ export const dataList: JobGridType[] = [
       },
     ],
   },
-];
+].sort((a, b) => b.date.getTime() - a.date.getTime());

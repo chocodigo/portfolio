@@ -1,6 +1,7 @@
 export type JobGridType = {
   jobName: string;
   duration: string;
+  date: Date;
   dataList: JobCardType[];
 };
 
