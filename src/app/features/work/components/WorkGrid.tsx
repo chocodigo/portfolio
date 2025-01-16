@@ -1,7 +1,14 @@
 "use client";
 
 import MotionStack from "@/app/shared/components/MotionStack";
-import { Card, CardContent, CardMedia, Grid2, Typography } from "@mui/material";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid2,
+  Typography,
+} from "@mui/material";
 import { JobGridType } from "../types/dataType";
 import MotionTypography from "@/app/shared/components/MotionTypography";
 import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
@@ -62,6 +69,11 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
                     {item.title}
                   </Typography>
                 </CardContent>
+                <CardActions sx={{ justifyContent: "flex-end" }}>
+                  <Typography sx={{ fontSize: "12px" }} color="textSecondary">
+                    더보기
+                  </Typography>
+                </CardActions>
               </Card>
             </MotionStack>
           </Grid2>
