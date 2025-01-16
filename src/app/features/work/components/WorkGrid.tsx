@@ -13,7 +13,11 @@ import { JobGridType } from "../types/dataType";
 import MotionTypography from "@/app/shared/components/MotionTypography";
 import { useSelectedPoupIdStates } from "@/app/shared/states/PopupId";
 
-export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
+export const WorkGrid = ({
+  dataList,
+  duration,
+  jobName,
+}: Omit<JobGridType, "date">) => {
   const { updateSelectedPopupId, updateNotionId } = useSelectedPoupIdStates();
 
   return (
