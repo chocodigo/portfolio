@@ -11,7 +11,7 @@ export const SkillList = ({ title, list }: SkillListProps) => {
   return (
     <MotionStack sx={{ gap: "10px" }}>
       <MotionTypography sx={{ fontSize: "14px" }}>{title}</MotionTypography>
-      <MotionStack sx={{ flexDirection: { lg: "row", xs: "column" } }}>
+      <MotionStack sx={{ flexDirection: "row" }}>
         {list.map((item, index) => (
           <SkillBox
             key={`SKillBox_${index}`}
