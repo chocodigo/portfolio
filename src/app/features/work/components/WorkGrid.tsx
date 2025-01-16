@@ -63,7 +63,7 @@ export const WorkGrid = ({ dataList, duration, jobName }: JobGridType) => {
               whileTap={{ scale: 0.95 }}
             >
               <Card sx={{ cursor: "pointer" }}>
-                <CardMedia component={"img"} height="140" image={item.image} />
+                <CardMedia component={"img"} image={item.image} />
                 <CardContent>
                   <Typography sx={{ fontSize: "14px" }}>
                     {item.title}

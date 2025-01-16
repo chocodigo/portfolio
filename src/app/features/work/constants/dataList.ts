@@ -8,7 +8,7 @@ export const dataList: JobGridType[] = [
     dataList: [
       {
         title: "법률사무소 어플리케이션",
-        image: "taeyang/등기어플.jpg",
+        image: "taeyang/등기어플.png",
         notionId: "1456ab489f6e8079aa63c21bdf48fb9a",
       },
       {
