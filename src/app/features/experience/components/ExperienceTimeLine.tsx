@@ -6,6 +6,7 @@ import GavelIcon from "@mui/icons-material/Gavel";
 import BusinessIcon from "@mui/icons-material/Business";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import { TeethIcon } from "../Icons/TeethIcon";
+import { Avatar } from "@mui/material";
 
 export const ExperienceTimeLine = () => {
   return (
@@ -42,6 +43,12 @@ export const ExperienceTimeLine = () => {
         subtitle="웹 프론트엔드 담당, 백엔드 담당, 웹사이드 cad 서브담당"
         duration="2023.05 - 2024.09"
         icon={<TeethIcon />}
+      />
+      <TimeDot
+        title="삼성전자 NSRM 프로젝트 프리랜서"
+        subtitle="웹 프론트엔드 담당"
+        duration="2025.01 - 2025.10"
+        icon={<Avatar sx={{ backgroundColor: "#D9D9DE" }}>S</Avatar>}
       />
     </Timeline>
   );

@@ -110,6 +110,8 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             작업물
           </MotionTypography>
         </NavItem>
+        {/** 이메일(연락하기) 탭 주석 처리 **/}
+        {/**
         <NavItem onClick={() => scrollToSection(sectionName.CONTACT)}>
           <MotionTypography
             sx={{ fontSize: "14px" }}
@@ -122,6 +124,7 @@ export const Navigation = ({ scrollToSection }: IProps) => {
             연락하기
           </MotionTypography>
         </NavItem>
+        **/}
       </MotionStack>
     </>
   );

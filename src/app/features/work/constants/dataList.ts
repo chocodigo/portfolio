@@ -95,6 +95,18 @@ export const dataList: JobGridType[] = [
     ],
   },
   {
+    jobName: "삼성전자 NSRM 프로젝트",
+    duration: "2025.01 - 2025.10",
+    date: new Date(2025, 1),
+    dataList: [
+      {
+        title: "NSRM 모바일 앱",
+        image: "ci_img_05.png",
+        notionId: "NSRM-2a16ab489f6e8039a6bee447a661a460",
+      },
+    ],
+  },
+  {
     jobName: "사이드 프로젝트",
     duration: "",
     date: new Date(2000, 1),
