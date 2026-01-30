@@ -27,13 +27,14 @@ export const Navigation = ({ scrollToSection }: IProps) => {
       }
     );
 
-    if (placeholderRef.current) {
-      observer.observe(placeholderRef.current);
+    const placeholderElement = placeholderRef.current;
+    if (placeholderElement) {
+      observer.observe(placeholderElement);
     }
 
     return () => {
-      if (placeholderRef.current) {
-        observer.unobserve(placeholderRef.current);
+      if (placeholderElement) {
+        observer.unobserve(placeholderElement);
       }
     };
   }, []);

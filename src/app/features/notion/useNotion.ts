@@ -5,12 +5,14 @@ export const useNotion = (NOTION_PAGE_ID: string | null) => {
   const [response, setResponse] = useState();
 
   useEffect(() => {
+    if (!NOTION_PAGE_ID) return;
+    
     axios
       .get(`https://notion-api.splitbee.io/v1/page/${NOTION_PAGE_ID}`)
       .then(({ data }) => {
         setResponse(data);
       });
-  }, []);
+  }, [NOTION_PAGE_ID]);
 
   return { response };
 };
