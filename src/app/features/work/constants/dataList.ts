@@ -97,7 +97,7 @@ export const dataList: JobGridType[] = [
   {
     jobName: "삼성전자 NSRM 프로젝트",
     duration: "2025.01 - 2025.10",
-    date: new Date(2025, 1),
+    date: new Date(2025, 10),
     dataList: [
       {
         title: "NSRM 모바일 앱",

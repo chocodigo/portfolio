@@ -10,6 +10,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { purple } from "@mui/material/colors";
 import { useEffect, useRef, useState } from "react";
 import Zoom from "@mui/material/Zoom";
+import { FloatingCTA } from "./shared/components/FloatingCTA";
 
 const theme = createTheme({
   breakpoints: {
@@ -43,10 +44,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    document.body.addEventListener("scroll", handleScroll); // 스크롤 이벤트 등록
+    document.body.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.body.removeEventListener("scroll", handleScroll); // 이벤트 정리
+      document.body.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -64,6 +65,7 @@ export default function Home() {
             <Header />
             <Body />
           </Stack>
+          <FloatingCTA show={!isTop} />
           {!isTop && (
             <Zoom
               in={!isTop}

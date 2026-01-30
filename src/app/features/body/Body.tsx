@@ -5,16 +5,15 @@ import { About } from "../about";
 import { Skill } from "../skill";
 import { Experience } from "../experience";
 import { Work } from "../work";
+import { Footer } from "../footer";
 import { useRef } from "react";
 import { sectionName, SectionRefs } from "../navigation/navType";
-// import { Contact } from "../contact";
 
 export const Body = () => {
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const skillRef = useRef<HTMLDivElement | null>(null);
   const experienceRef = useRef<HTMLDivElement | null>(null);
   const workRef = useRef<HTMLDivElement | null>(null);
-  // const contactRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToSection = (section: SectionRefs) => {
     switch (section) {
@@ -50,14 +49,6 @@ export const Body = () => {
           });
         }
         break;
-      // case sectionName.CONTACT:
-      //   if (contactRef.current) {
-      //     contactRef.current.scrollIntoView({
-      //       behavior: "smooth",
-      //       block: "start",
-      //     });
-      //   }
-      //   break;
     }
   };
 
@@ -83,12 +74,7 @@ export const Body = () => {
       <div ref={workRef}>
         <Work />
       </div>
-      {/** 이메일 섹션 주석 처리 **/}
-      {/**
-      <div ref={contactRef}>
-        <Contact />
-      </div>
-      **/}
+      <Footer />
     </Stack>
   );
 };
