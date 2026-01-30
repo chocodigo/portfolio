@@ -1,0 +1,10 @@
+# https://www.chocodigo.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.chocodigo.com/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
